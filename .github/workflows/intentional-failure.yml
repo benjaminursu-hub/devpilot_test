@@ -1,0 +1,16 @@
+
+name: DevPilot Failure Test
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simulate a failed test
+        run: |
+          echo "Running DevPilot diagnostic test..."
+          echo "ERROR: Simulated test failure"
+          exit 1
